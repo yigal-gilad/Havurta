@@ -22,6 +22,7 @@ import admin from './admin';
 import navbar from '../components/navbar/navbar.component';
 import footer from '../components/footer/footer.component';
 import main from './main/main.component';
+import private1 from './private/private.component';
 import constants from './app.constants';
 import util from '../components/util/util.module';
 import socket from '../components/socket/socket.service';
@@ -29,7 +30,7 @@ import socket from '../components/socket/socket.service';
 import './app.scss';
 
 angular.module('havrutaApp', [ngCookies, ngResource, ngSanitize, 'btford.socket-io', ngRoute,
-  uiBootstrap, _Auth, account, admin, 'validation.match', navbar, footer, main, constants,
+  uiBootstrap, _Auth, account, admin, 'validation.match', navbar, footer, main, private1, constants,
   socket, util
 ])
   .config(routeConfig)

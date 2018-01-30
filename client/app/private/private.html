@@ -1,0 +1,7 @@
+<div>
+<button class="form-control" ng-click="$ctrl.showName()">Show Name</button>
+<div style="color: red;" ng-repeat="x in $ctrl.names">{{ x.Name + ": " + x.Country}}</div>
+<p ng-repeat="item in ['yigal','gilad']">{{ item }} {{ $ctrl.names | uppercase }}</p>
+<p ng-repeat="x in [name: "yigal"]>{{ x.name }}</p>
+<div>{{ $ctrl.privatename }}</div>
+</div>

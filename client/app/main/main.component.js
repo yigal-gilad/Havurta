@@ -3,15 +3,13 @@ const ngRoute = require('angular-route');
 import routing from './main.routes';
 
 export class MainController {
-  $http;
-  socket;
-  awesomeThings = [];
-  newThing = '';
-
   /*@ngInject*/
   constructor($http, $scope, socket) {
     this.$http = $http;
     this.socket = socket;
+    this.awesomeThings = [];
+    this.newThing = '';
+    this.username = {name: 'yigal'}
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
