@@ -1,8 +1,7 @@
+<br>
+<br>
 <div class="container">
   <h2>Chat with your friends!</h2>
-  <div>{{ $ctrl.username.name }}</div>
-    <div>{{ $ctrl.username.fname }}</div>
-  <div>{{ $ctrl.newThing }}</div>
   <ul class="list-group">
     <li class="list-group-item">
       <p class="input-group">
@@ -21,10 +20,9 @@
             <div class="media-body">
               <h4 class="media-heading">{{ $ctrl.getCurrentUser().name }}</h4>
               <div>
-                <button type="submit" class="btn btn-bsic" ng-click="$ctrl.deleteThing()">Delete
+                <button type="submit" class="btn btn-bsic" ng-click="$ctrl.deleteThing(x)">Delete
                 </button>
-                <strong style="color: blue">{{ $index + 1 }}</strong>
-                <strong>Message: </strong> {{ x.name }}
+                <strong>{{ x.name }}</strong>
               </div>
             </div>
             <hr>

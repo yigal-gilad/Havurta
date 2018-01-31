@@ -4,12 +4,12 @@ import routing from './main.routes';
 
 export class MainController {
   /*@ngInject*/
-  constructor($http, $scope, socket) {
+  constructor($http, $scope, socket, Auth) {
     this.$http = $http;
     this.socket = socket;
     this.awesomeThings = [];
     this.newThing = '';
-    this.username = {name: 'yigal'}
+    this.getCurrentUser = Auth.getCurrentUserSync;
 
     $scope.$on('$destroy', function() {
       socket.unsyncUpdates('thing');
@@ -25,7 +25,7 @@ export class MainController {
   }
 
   addThing() {
-    if(this.newThing) {
+    if (this.newThing) {
       this.$http.post('/api/things', {
         name: this.newThing
       });
